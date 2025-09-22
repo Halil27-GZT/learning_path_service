@@ -3,8 +3,7 @@ from pydantic import BaseModel, Field
 from datetime import datetime
 
 MilestoneType = Literal["skill", "topic"]
-MilestoneStatus = Literal["pending", "in_progress", "done"]
-
+MilestoneStatus = Literal["pending", "in-progress", "done"]
 
 class GenerateRequest(BaseModel):
     userId: Optional[str] = None
@@ -27,8 +26,9 @@ class Milestone(BaseModel):
 class LearningPath(BaseModel):
     pathId: str
     userId: Optional[str] = None
-    goals: Dict[str] = None
+    goals: Dict[str, List[str]]
+    summary: Optional[str] = None
     milestones: List[Milestone]
     createdAt: datetime
     updatedAt: datetime
-    
+
