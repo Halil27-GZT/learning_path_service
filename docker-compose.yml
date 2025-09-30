@@ -64,7 +64,7 @@ services:
     environment:
       - DATABASE_URL=postgresql+psycopg2://app:app123@pg-topics:5432/topics_db
     ports:
-      - "5005:5000"
+      - "5050:5000"
     depends_on:
       - pg-topics
 
