@@ -38,7 +38,7 @@ def test_fetch_skills_calls_expected_url(monkeypatch):
     assert response == [{"id": "s1"}, {"name": "Skill 1"}]
     assert len(cap.calls) == 1
     assert cap.calls[0].endswith("/skills")
-    
+     
     
 def test_fetch_resources_calls_expected_url_and_transforms_ids(monkeypatch):
     cap = _Capture()
