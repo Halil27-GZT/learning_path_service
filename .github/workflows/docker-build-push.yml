@@ -32,8 +32,7 @@ jobs:
                 file: ./Dockerfile
                 push: true
                 tags: |
-                  tags: |
-                    ${{ secrets.DOCKERHUB_USERNAME }}/learning-path-service:latest
-                    ${{ secrets.DOCKERHUB_USERNAME }}/learning-path-service:${{ github.run_number }}
+                  ${{ secrets.DOCKERHUB_USERNAME }}/learning-path-service:latest
+                  ${{ secrets.DOCKERHUB_USERNAME }}/learning-path-service:${{ github.run_number }}
 
             
